@@ -267,17 +267,41 @@ function nextRoll () {
 function setButtons () {
     const rollbtn = document.querySelector('.gachabutton');
     rollbtn.addEventListener('click', rollSwordValues);
+    rollbtn.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'rgb(74, 85, 208)';
+    });
+    rollbtn.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'black';
+    });
     
     const nextRollBtn = document.querySelector('.nextrollbutton');
     nextRollBtn.addEventListener('click', nextRoll);
+    nextRollBtn.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'rgb(74, 85, 208)';
+    });
+    nextRollBtn.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'black';
+    });
     
     const rollbtn2 = document.querySelector('.gachabutton2');
     rollbtn2.addEventListener('click', rollShieldValues);
+    rollbtn2.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'rgb(74, 85, 208)';
+    });
+    rollbtn2.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'black';
+    });
     
     const fightBtn = document.querySelector('.fight');
     fightBtn.addEventListener('click', damageToMonster);
     fightBtn.addEventListener('click', damageToPlayer);
-    
+    fightBtn.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'white';
+    });
+    fightBtn.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'rgb(255, 55, 0)';
+    });
+
     const nextbtn = document.querySelector('.nextbutton');
     nextbtn.addEventListener('click', ()=>{
         document.querySelector("#game-window").style.background = 'black';
@@ -294,10 +318,22 @@ function setButtons () {
         setMonsterStats();
         setPlayerHP();
     })
+    nextbtn.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'rgb(74, 85, 208)';
+    });
+    nextbtn.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'black';
+    });
     
     const fBattleBtn = document.querySelector('.finalBattle');
     fBattleBtn.addEventListener('click', damageToBoss);
     fBattleBtn.addEventListener('click', damageToPlayer);
+    fBattleBtn.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'white';
+    });
+    fBattleBtn.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'rgb(255, 55, 0)';
+    });
     
     const nextbtn2 = document.querySelector('.nextbutton2');
     nextbtn2.addEventListener('click', ()=>{
@@ -311,11 +347,17 @@ function setButtons () {
         setBossStats();
         setPlayerHP();
     })
+    nextbtn2.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'rgb(74, 85, 208)';
+    });
+    nextbtn2.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'white';
+    });
 
     function setStartBtn () {
         const startbtn = document.querySelector('.startbutton');
         startbtn.addEventListener('mouseover', (e) => {
-            e.target.style.color = 'grey';
+            e.target.style.color = 'black';
         });
         startbtn.addEventListener('mouseout', (e) => {
             e.target.style.color = 'white';
@@ -335,6 +377,13 @@ function setButtons () {
     
     const rtnStartBtn = document.querySelector('.returnToStart');
     rtnStartBtn.addEventListener('click', titlePage);
+    rtnStartBtn.addEventListener('mouseover', (e) => {
+        e.target.style.color = 'rgb(74, 85, 208)';
+    });
+    rtnStartBtn.addEventListener('mouseout', (e) => {
+        e.target.style.color = 'white';
+    });
+    
 }
 
 hideAll();
