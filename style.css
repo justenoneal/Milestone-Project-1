@@ -1,0 +1,330 @@
+body {
+}
+
+#game-window {
+    position: absolute;
+    height: 700px;
+    width: 1000px;
+    background: linear-gradient(220.55deg, #7CF7FF 0%, #4B73FF 100%);
+    border: solid black 2px;
+}
+
+.title-screen {
+    text-align: center;
+    position: relative;
+    top: 220px;
+    left: 0px;
+}
+
+h1 {
+    font-size: 380%;
+}
+
+h2 {
+    text-align: left;
+    position: relative;
+    top:30px;
+    left:275px;
+    font-size: 200%;
+}
+
+.startbutton {
+    position: relative;
+    font-size: 280%;
+    background-color: transparent;
+    color:white;
+    border-color: transparent;
+}
+
+.gachabutton {
+    position: absolute;
+    top: 300px;
+    left: 215px;
+    font-size: 280%;
+    background-color: white;
+    border: white;
+    font-family: 'Times New Roman', Times, sans serif;
+}
+
+.nextrollbutton {
+    position: absolute;
+    top: 300px;
+    left: 215px;
+    font-size: 280%;
+    background-color: white;
+    border: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gachabutton2 {
+    position: absolute;
+    top: 300px;
+    left: 215px;
+    font-size: 280%;
+    background-color: white;
+    border: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nextbutton {
+    position: absolute;
+    top: 390px;
+    left: 838px;
+    font-size: 280%;
+    background-color: white;
+    border: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nextbutton2 {
+    position: absolute;
+    z-index: 2;
+    top: 390px;
+    left: 838px;
+    font-size: 280%;
+    color: white;
+    background-color: black;
+    border: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nextbutton3 {
+    position: absolute;
+    z-index: 2;
+    top: 390px;
+    left: 838px;
+    font-size: 280%;
+    color: white;
+    background-color: black;
+    border: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#stat1 {
+    position:absolute;
+    height: 65px;
+    width: 65px;
+    top: 270px;
+    left: 112px;
+    z-index: 1;
+    border: solid black 2px;
+    font-size:335%;
+    text-align: center;
+}
+#stat2 {
+    position:absolute;
+    height: 65px;
+    width: 65px;
+    top: 447px;
+    left: 112px;
+    z-index: 1;
+    border: solid black 2px;
+    font-size:335%;
+    text-align: center;
+}
+
+#stat3 {
+    position:absolute;
+    height: 65px;
+    width: 65px;
+    top: 447px;
+    left: 280px;
+    z-index: 1;
+    border: solid black 2px;
+    font-size:335%;
+    text-align: center;
+}
+
+
+#sword {
+    border: solid black 4px;
+    width: auto;
+    height: 410px;
+    position: absolute;
+    left: 110px;
+    top: 100px;
+}
+
+#swordT {
+    width: auto;
+    z-index: 2;
+    height: 150px;
+    position: absolute;
+    rotate: 10deg;
+    left: 568px;
+    top: 72px;
+}
+
+#shield {
+    border: solid black 4px;
+    width: auto;
+    height: 410px;
+    position: absolute;
+    left: 110px;
+    top: 100px;
+}
+
+#shieldT {
+    width: auto;
+    z-index: 2;
+    height: 100px;
+    position: absolute;
+    rotate: 0deg;
+    left: 660px;
+    top: 248px;
+}
+
+#hero {
+    width: auto;
+    height: 410px;
+    size: 70%;
+    position: absolute;
+    left: 550px;
+    top: 110px;
+}
+
+#shieldstat1 {
+    position:absolute;
+    height: 65px;
+    width: 65px;
+    top: 435px;
+    left: 156px;
+    z-index: 1;
+    border: solid black 2px;
+    font-size:335%;
+    text-align: center;
+}
+   
+#shieldstat2 {
+    position:absolute;
+    height: 65px;
+    width: 65px;
+    top: 435px;
+    left: 238px;
+    z-index: 1;
+    border: solid black 2px;
+    font-size:335%;
+    text-align: center;
+}
+
+#shieldstat3 {
+    position:absolute;
+    height: 65px;
+    width: 65px;
+    top: 435px;
+    left: 320px;
+    z-index: 1;
+    border: solid black 2px;
+    font-size:335%;
+    text-align: center;
+}
+
+#combatHero {
+    position: absolute;
+    height: 300px;
+    width: 260px;
+    top: 250px;
+    left: 90px;
+}
+
+#monster {
+    position: absolute;
+    height: 370px;
+    width: 370px;
+    top: 180px;
+    left: 590px;
+}
+
+#devil {
+    position: absolute;
+    height: 455px;
+    width: auto;
+    top: 100px;
+    left: 560px;
+}
+
+#playerHitPoints {
+    position: absolute;
+    z-index: 2;
+    top: 560px;
+    left: 118px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 205%;
+    color: white;
+    background-color: black;
+    border: solid white 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#monsterHitPoints {
+    position: absolute;
+    z-index: 2;
+    top: 560px;
+    left: 688px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 205%;
+    color: white;
+    background-color: black;
+    border: solid white 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fight {
+    position: absolute;
+    z-index: 2;
+    top: 325px;
+    left: 420px;
+    font-size: 280%;
+    color: rgb(255, 55, 0);
+    background-color: black;
+    border: solid rgb(255, 55, 0)1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.finalBattle {
+    position: absolute;
+    z-index: 2;
+    top: 325px;
+    left: 420px;
+    font-size: 280%;
+    color: rgb(255, 55, 0);
+    background-color: black;
+    border: solid rgb(255, 55, 0)1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#gameOver {
+    position: absolute;
+    font-size: 400%;
+    left: 295px;
+    top: 315px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    color:white;
+    border-color: transparent;
+}
+
+#victory {
+    position: absolute;
+    font-size: 400%;
+    left: 227px;
+    top: 315px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    color:white;
+    border-color: transparent;
+}
+
+.returnToStart {
+    position: absolute;
+    z-index: 2;
+    top: 395px;
+    left: 685px;
+    font-size: 240%;
+    white-space: nowrap;
+    color: white;
+    background-color: black;
+    border: black;
+}
