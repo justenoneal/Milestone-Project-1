@@ -36,6 +36,16 @@ h2 {
     border-color: transparent;
 }
 
+.instructions {
+    position: absolute;
+    top: 255px;
+    left: 415px;
+    font-size: 200%;
+    background-color: transparent;
+    color:white;
+    border-color: transparent;
+}
+
 .gachabutton {
     position: absolute;
     top: 300px;

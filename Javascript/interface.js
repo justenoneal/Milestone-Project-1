@@ -22,7 +22,6 @@ function hideAll () {
     document.querySelector('.gachabutton2').hidden = true;
     document.querySelector('.nextbutton').hidden = true;
     document.querySelector('.nextbutton2').hidden = true;
-    document.querySelector('.nextbutton3').hidden = true;
     document.querySelector('.returnToStart').hidden = true;
     document.querySelector('.fight').hidden = true;
     document.querySelector('.finalBattle').hidden = true;
@@ -31,6 +30,7 @@ function hideAll () {
     document.querySelector('h1').hidden = true;
     document.querySelector('h2').hidden = true;
     document.querySelector('.startbutton').hidden = true;
+    document.querySelector('.instructions').hidden = true;
     document.querySelector('#gameOver').hidden = true;
     document.querySelector('#victory').hidden = true;
 }
@@ -40,7 +40,8 @@ function titlePage () {
     document.querySelector('h1').hidden = false;
     document.querySelector('h2').hidden = false;
     document.querySelector('.startbutton').hidden = false;
-    document.querySelector("#game-window").style.background = 'linear-gradient(220.55deg, #7CF7FF 0%, #4B73FF 100%)';
+    document.querySelector('.instructions').hidden = false;
+    document.querySelector('#game-window').style.background = 'linear-gradient(220.55deg, #7CF7FF 0%, #4B73FF 100%)';
 }
 
 function setMonsterStats () {
