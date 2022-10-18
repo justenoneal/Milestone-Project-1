@@ -33,7 +33,7 @@ function hideAll () {
     document.querySelector('.startbutton').hidden = true;
     document.querySelector('#gameOver').hidden = true;
     document.querySelector('#victory').hidden = true;
-    }
+}
 
 function titlePage () {
     hideAll()
@@ -41,7 +41,7 @@ function titlePage () {
     document.querySelector('h2').hidden = false;
     document.querySelector('.startbutton').hidden = false;
     document.querySelector("#game-window").style.background = 'linear-gradient(220.55deg, #7CF7FF 0%, #4B73FF 100%)';
-    }
+}
 
 function setMonsterStats () {
     let hp = document.querySelector('#monsterHitPoints');
@@ -294,12 +294,13 @@ function setButtons () {
     const nextbtn = document.querySelector('.nextbutton');
     btnMouseover(nextbtn, 'rgb(74, 85, 208)', 'black');
     nextbtn.addEventListener('click', ()=>{
+        //The event listener on rollbtn2 was removed in rollShieldValues
+        //to prevent players from rerolling shield stats freely till nextbtn is clicked.
+        rollbtn2.addEventListener('click', rollShieldValues);
         document.querySelector("#game-window").style.background = 'black';
-        const rollbtn2 = document.querySelector('.gachabutton2');
         hideAll()
         document.querySelector('#combatHero').hidden = false;
         document.querySelector('#monster').hidden = false;
-        rollbtn2.addEventListener('click', rollShieldValues);
         document.querySelector('#playerHitPoints').hidden = false;
         document.querySelector('#monsterHitPoints').hidden = false;
         document.querySelector('.fight').hidden = false;
@@ -345,7 +346,6 @@ function setButtons () {
     const rtnStartBtn = document.querySelector('.returnToStart');
     btnMouseover(rtnStartBtn, 'rgb(74, 85, 208)', 'white');
     rtnStartBtn.addEventListener('click', titlePage);
-    
 }
 
 hideAll();
