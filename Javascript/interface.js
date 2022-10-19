@@ -10,8 +10,10 @@ function hideAll () {
     document.querySelector('#playerHitPoints').hidden = true;
     document.querySelector('#monsterHitPoints').hidden = true;
     document.querySelector('#sword').hidden = true;
+    document.querySelector('#tutorialSword').hidden = true;
     document.querySelector('#swordT').hidden = true;
     document.querySelector('#shield').hidden = true;
+    document.querySelector('#tutorialShield').hidden = true;
     document.querySelector('#shieldT').hidden = true;
     document.querySelector('#hero').hidden = true;
     document.querySelector('#combatHero').hidden = true;
@@ -328,6 +330,16 @@ function setButtons () {
         setPlayerHP();
     })
 
+    const instBtn = document.querySelector('.instructions');
+    btnMouseover(instBtn, 'black', 'white');
+    instBtn.addEventListener('click', ()=>{
+        hideAll()
+        document.querySelector("#game-window").style.background = 'white';
+        document.querySelector('#tutorialShield').hidden = false;
+        document.querySelector('#tutorialSword').hidden = false;
+        document.querySelector('.returnToStart').hidden = false;
+    })
+
     function setStartBtn () {
         const startbtn = document.querySelector('.startbutton');
         btnMouseover(startbtn, 'black', 'white');
@@ -341,7 +353,7 @@ function setButtons () {
             document.querySelector('#hero').hidden = false;
             document.querySelector('.gachabutton').hidden = false;
         });
-        }
+    }
     setStartBtn();
     
     const rtnStartBtn = document.querySelector('.returnToStart');
