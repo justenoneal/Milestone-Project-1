@@ -11,10 +11,12 @@ function hideAll () {
     document.querySelector('#monsterHitPoints').hidden = true;
     document.querySelector('#sword').hidden = true;
     document.querySelector('#tutorialSword').hidden = true;
+    document.querySelector('#swordDescript').hidden = true;
     document.querySelector('#swordT').hidden = true;
     document.querySelector('#shield').hidden = true;
     document.querySelector('#tutorialShield').hidden = true;
     document.querySelector('#shieldT').hidden = true;
+    document.querySelector('#shieldDescript').hidden = true;
     document.querySelector('#hero').hidden = true;
     document.querySelector('#combatHero').hidden = true;
     document.querySelector('#monster').hidden = true;
@@ -25,6 +27,7 @@ function hideAll () {
     document.querySelector('.nextbutton').hidden = true;
     document.querySelector('.nextbutton2').hidden = true;
     document.querySelector('.returnToStart').hidden = true;
+    document.querySelector('.returnToTitle').hidden = true;
     document.querySelector('.fight').hidden = true;
     document.querySelector('.finalBattle').hidden = true;
     document.querySelector('#combatHero').hidden = true;
@@ -32,7 +35,7 @@ function hideAll () {
     document.querySelector('h1').hidden = true;
     document.querySelector('h2').hidden = true;
     document.querySelector('.startbutton').hidden = true;
-    document.querySelector('.instructions').hidden = true;
+    document.querySelector('.guide').hidden = true;
     document.querySelector('#gameOver').hidden = true;
     document.querySelector('#victory').hidden = true;
 }
@@ -42,8 +45,18 @@ function titlePage () {
     document.querySelector('h1').hidden = false;
     document.querySelector('h2').hidden = false;
     document.querySelector('.startbutton').hidden = false;
-    document.querySelector('.instructions').hidden = false;
+    document.querySelector('.guide').hidden = false;
     document.querySelector('#game-window').style.background = 'linear-gradient(220.55deg, #7CF7FF 0%, #4B73FF 100%)';
+}
+
+function swordText () {
+    document.querySelector('#swordDescript').innerHTML = '1. Sharpness <br> \
+    2. Weight <br> 3. Penetration';
+}
+
+function shieldText () {
+    document.querySelector('#shieldDescript').innerHTML = '1. Durability <br> \
+    2. Weight <br> 3. Size';
 }
 
 function setMonsterStats () {
@@ -93,7 +106,7 @@ function damageToMonster () {
     if(mDR < 0) {
         mDR = 0;
     }
-    let playerAtkP = (parseInt(playerSharp.dataset.swordtest) * parseInt(playerWeight.dataset.swordtest2)/50 + 1000);
+    let playerAtkP = (parseInt(playerSharp.dataset.swordtest) * parseInt(playerWeight.dataset.swordtest2)/50 + 100);
     console.log(`player attack power: ${playerAtkP}`);
     console.log(`monster defense - player's penetration: ${mDR}`)
     let mhp = parseInt(parseInt(hp.dataset.monsterHP) + mDR - (playerAtkP));
@@ -123,7 +136,7 @@ function damageToBoss () {
     if(mDR < 0) {
         mDR = 0;
     }
-    let playerAtkP = (parseInt(playerSharp.dataset.swordtest) * parseInt(playerWeight.dataset.swordtest2)/50 + 1000);
+    let playerAtkP = (parseInt(playerSharp.dataset.swordtest) * parseInt(playerWeight.dataset.swordtest2)/50 + 100);
     console.log(`player attack power: ${playerAtkP}`);
     console.log(`monster defense - player's penetration: ${mDR}`)
     let mhp = parseInt(parseInt(hp.dataset.monsterHP) + mDR - (playerAtkP));
@@ -330,14 +343,18 @@ function setButtons () {
         setPlayerHP();
     })
 
-    const instBtn = document.querySelector('.instructions');
-    btnMouseover(instBtn, 'black', 'white');
-    instBtn.addEventListener('click', ()=>{
+    const instructBtn = document.querySelector('.guide');
+    btnMouseover(instructBtn, 'black', 'white');
+    instructBtn.addEventListener('click', ()=>{
         hideAll()
+        swordText();
+        shieldText();
         document.querySelector("#game-window").style.background = 'white';
         document.querySelector('#tutorialShield').hidden = false;
+        document.querySelector('#shieldDescript').hidden = false;
         document.querySelector('#tutorialSword').hidden = false;
-        document.querySelector('.returnToStart').hidden = false;
+        document.querySelector('#swordDescript').hidden = false;
+        document.querySelector('.returnToTitle').hidden = false;
     })
 
     function setStartBtn () {
@@ -356,6 +373,12 @@ function setButtons () {
     }
     setStartBtn();
     
+    const rtnTitleBtn = document.querySelector('.returnToTitle');
+    btnMouseover(rtnTitleBtn, 'rgb(74, 85, 208)', 'black');
+    rtnTitleBtn.addEventListener('click', titlePage, ()=> {
+        btnMouseover(rtnTitleBtn, 'rgb(74, 85, 208)', 'black');
+    });
+
     const rtnStartBtn = document.querySelector('.returnToStart');
     btnMouseover(rtnStartBtn, 'rgb(74, 85, 208)', 'white');
     rtnStartBtn.addEventListener('click', titlePage);

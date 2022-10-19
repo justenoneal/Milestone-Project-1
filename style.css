@@ -36,11 +36,11 @@ h2 {
     border-color: transparent;
 }
 
-.instructions {
+.guide {
     position: absolute;
     top: 255px;
-    left: 415px;
-    font-size: 200%;
+    left: 454.5px;
+    font-size: 180%;
     background-color: transparent;
     color:white;
     border-color: transparent;
@@ -49,7 +49,7 @@ h2 {
 .gachabutton {
     position: absolute;
     top: 300px;
-    left: 215px;
+    left: 213px;
     font-size: 280%;
     background-color: white;
     border: white;
@@ -173,6 +173,15 @@ h2 {
     top: 72px;
 }
 
+#swordDescript {
+    width: auto;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: 470px;
+    font-size: 200%;
+}
+
 #shield {
     border: solid black 4px;
     width: auto;
@@ -198,6 +207,15 @@ h2 {
     rotate: 0deg;
     left: 660px;
     top: 248px;
+}
+
+#shieldDescript {
+    width: auto;
+    height: 100px;
+    position: absolute;
+    left: 550px;
+    top: 470px;
+    font-size: 200%;
 }
 
 #hero {
@@ -341,6 +359,18 @@ h2 {
     background-color: transparent;
     color:white;
     border-color: transparent;
+}
+
+.returnToTitle {
+    position: absolute;
+    z-index: 2;
+    top: 395px;
+    left: 590px;
+    font-size: 230%;
+    white-space: nowrap;
+    color: black;
+    background-color: white;
+    border: black;
 }
 
 .returnToStart {
