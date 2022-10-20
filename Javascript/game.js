@@ -387,4 +387,3 @@ function setButtons () {
 hideAll();
 titlePage();
 setButtons();
-
